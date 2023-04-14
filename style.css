@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: KK;
+    src: url(fonts/Keetano-Katana-Bold.ttf);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b {
+    font-size: 70px;
+    color: #7f00ff;
+}
+
+.navItems {
+    display: flex;
+}
+
+.navItems li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems li a {
+    position: relative;
+    font-family: 'poppins', sans-serif;
+    font-size: 25px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li a::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: darkblue;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+.navItems li a:hover::after {
+    transform: scale(1);
+}
+
+.navItems li:hover a,
+.links a:hover {
+    color: #7f00ff;
+}
+
+.links a {
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+}
+
+.toggle_btn {
+    color: #3d535f;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 80px;
+    width: 100px;
+    height: 0;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    transition: height 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    width: 60px;
+    height: 300px;
+    position: absolute;
+    left: 280px;
+    right: 0;
+}
+
+.dropdown_menu li {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu a {
+    font-size: 18px;
+    padding: 5px;
+    color: #3d535f;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+    .navItems,
+    .links,
+    .mail {
+        display: none;
+    }
+    .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+.mail {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    background-color: #3d535f;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    left: 990px;
+    top: 25px;
+    transition: 0.6s;
+}
+
+.mail a {
+    font-family: KK;
+    color: white;
+    text-decoration: none;
+}
+
+.mail:hover {
+    width: 140px;
+    background-color: #7f00ff;
+}
+
+.mail a:hover {
+    color: #3d535f;
+}
+
+.center-container {
+    /* background-color: red; */
+    width: 1200px;
+    height: 550px;
+    margin: 40px auto;
+    /* cursor: url(cursors/iconmonstr-code-9.svg), auto; */
+}
+
+
+/* .center-container:hover {
+        cursor: url(cursors/iconmonstr-code-9.svg), auto;
+    } */
+
+.my_name {
+    /* background-color: blue; */
+    width: 700px;
+    height: 45px;
+    position: relative;
+    margin: auto;
+}
+
+.my_name h1 {
+    font-family: KK;
+    font-size: 35px;
+    text-align: center;
+}
+
+.img-container {
+    /* background-color: aliceblue; */
+    width: 450px;
+    height: 445px;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    overflow: hidden;
+    /* z-index: 2; */
+}
+
+.img-container img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    /* transition: all 0.5s; */
+}
+
+
+/* .center-container:hover .img-container {
+        transform: translate(10px, 10px);
+    }
+     */
+
+
+/* ::before pseudoelementi */
+
+.img-container::before {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.btn-container {
+    width: 500px;
+    height: 70px;
+    /* background-color: #7f00ff; */
+    display: flex;
+    position: absolute;
+    top: 567px;
+    left: 485px;
+}
+
+.btn-one {
+    width: 210px;
+    font-family: KK;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 2px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.btn-one a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-two {
+    width: 210px;
+    font-family: KK;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 2px 15px;
+    font-size: 20px;
+    transition: 0.6s;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.btn-two a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-one:hover,
+.btn-two:hover {
+    width: 250px;
+}
+
+.baku {
+    /* background-color: red; */
+    width: 300px;
+    height: 35px;
+    margin: auto;
+    position: absolute;
+    top: 350px;
+    bottom: 0;
+    right: 800px;
+    left: 0;
+}
+
+.baku h1 {
+    font-family: KK;
+    font-size: 25px;
+    text-align: center;
+}
+
+.web_1 {
+    /* background-color: blue; */
+    width: 1000px;
+    height: 210px;
+    font-size: 90px;
+    text-align: center;
+    font-family: KK;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    left: 200px;
+    top: 140px;
+    color: transparent;
+    -webkit-text-stroke: 1px #0B0B0B !important;
+}
+
+.web_1 h1 a {
+    text-decoration: none;
+    color: transparent;
+    outline: none;
+}
+
+.web_2 {
+    /* background-color: red; */
+    width: 1000px;
+    height: 210px;
+    font-size: 90px;
+    text-align: center;
+    font-family: KK;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    left: 200px;
+    top: 140px;
+    display: none;
+}
+
+.front_1 {
+    /* background-color: aqua; */
+    width: 1000px;
+    height: 210px;
+    font-size: 90px;
+    text-align: center;
+    font-family: KK;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    left: 200px;
+    top: 310px;
+    color: transparent;
+    -webkit-text-stroke: 1px #0B0B0B !important;
+}
+
+.front_1 h1 a {
+    text-decoration: none;
+    color: transparent;
+    outline: none;
+}
+
+.front_2 {
+    width: 1000px;
+    height: 210px;
+    font-size: 90px;
+    text-align: center;
+    font-family: KK;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    left: 200px;
+    top: 310px;
+}
+
+#web_black,
+#front_black {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+#web_black {
+    opacity: 1;
+}
+
+#web_white:hover~#web_black,
+#front_white:hover~#front_black {
+    opacity: 1;
+}
+
+.circle-cursor {
+    cursor: default;
+}
+
+.circle-cursor span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    z-index: 3;
+    display: none;
+}
+
+@media only screen and (max-width:556px) {
+    .center-container {
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        height: 100vh;
+        margin-right: auto;
+        margin-left: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .center-container {
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+    }
+    /* body {
+        overflow: hidden;
+    } */
+    .my_name {
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .my_name h1 {
+        font-size: 18px;
+    }
+    .img-container {
+        width: 90%;
+        height: auto;
+        position: static;
+        margin: 180px auto;
+    }
+    .img-container::before {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        height: 70px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
+    .btn-container {
+        width: 90%;
+        /* height: auto; */
+        position: absolute;
+        top: 300px;
+        left: 0;
+        right: 0;
+        margin: 40px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .btn-one,
+    .btn-two {
+        width: 60%;
+        margin: 10px 2.5%;
+    }
+    .baku {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        position: absolute;
+        top: 300px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .web_1,
+    .web_2,
+    .front_1,
+    .front_2 {
+        width: 90%;
+        height: auto;
+        font-size: 30px;
+        text-align: center;
+        font-family: KK;
+        cursor: pointer;
+        position: static;
+        margin: 5px auto;
+    }
+    .web_1,
+    .front_2 {
+        display: none;
+    }
+}
+
+
+/* #cursor {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000;
+        transition: 0.1s;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        pointer-events: none;
+    } */
+
+
+/* .circle {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: red;
+        opacity: 0;
+        transition: opacity 0.2s, transform 0.2s;
+        transform: translate(-50%, -50%) scale(0);
+    } */
+
+
+/* opacity: 0; */
+
+
+/* Dairenin başlangıçta görünmemesi */
+
+
+/* transition: opacity 0.2s ease-in-out; */
+
+
+/* Animasyonlu görünürlük geçişi ekleme */
+
+
+/* opacity: 1; */
+
+
+/* Dairenin görünür hale gelmesi */
+
+
+/* transform: rotate(360deg); */
+
+
+/* Dairenin tam tur dönmesi */
+
+
+/* transition: transform 1s ease-in-out, opacity 0.2s ease-in-out; */
+
+
+/* Yavaş dönüş animasyonu ekleme */
+
+
+/* .ok-div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+    }

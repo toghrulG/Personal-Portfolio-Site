@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <script src="https://kit.fontawesome.com/ce50f9fdb0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="contact.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("mwAOaQy8UOPa421WR");
+        })();
+    </script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="contact_content">
+                <h3 class="contact_title">
+                    <i class="fa-regular fa-comment"></i> Talk to me
+                </h3>
+            </div>
+            <div class="contact_info">
+                <div class="contact_data">
+                    <span class="contact_data_title">Email</span>
+                    <span class="contact_data_info">toghruldeveloper@gmail.com</span>
+                </div>
+                <div class="contact_data">
+                    <span class="contact_data_title">Whatsapp</span>
+                    <span class="contact_data_info">+994 515270966</span>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=994515270966" class="contact_button">Write me<i class="fa-solid fa-arrow-right"></i></a>
+
+                </div>
+                <div class="contact_data">
+                    <span class="contact_data_title">Messenger</span>
+                    <span class="contact_data_info">@...</span> Insert your brand name or profile
+                    <a target="_blank" href="m.me///" class="contact_button">Write me<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="contact_content">
+                <h3 class="contact_title">
+                    <i class="fa-solid fa-paper-plane"></i> Write me your project
+                </h3>
+                <form action="" class="contact_form" id="contact_form">
+                    <div class="contact_form_div">
+                        <label class="contact_form_tag">Names</label>
+                        <input type="text" class="contact_form_input" name="user_name" required id="user_name" placeholder="Write your names...">
+                    </div>
+                    <div class="contact_form_div">
+                        <label class="contact_form_tag">Mail</label>
+                        <input type="email" class="contact_form_input" name="user_email" required id="user_email" placeholder="Write your email...">
+                    </div>
+                    <div class="contact_form_div contact_form_area">
+                        <label class="contact_form_tag">Project</label>
+                        <textarea class="contact_form_input" placeholder="Write your project" name="contact_project" id="contact_project"></textarea>
+                    </div>
+                    <p class="contact_message" id="contact-message"></p>
+                    <button type="submit" class="contact_button">Submit<i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                    <!-- <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div> -->
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <section class="contact_header" id="contact">
+        <h2 class="section_title">Contact Me</h2>
+        <span class="section_subtitle">Get in touch</span>
+
+        <div class="contact_container">
+            <div class="contact_content">
+                <h3 class="contact_title">
+                    <i class="fa-regular fa-comment"></i> Talk to me
+                </h3>
+                <div class="contact_info">
+                    <div class="contact_data">
+                        <span class="contact_data_title">Email</span>
+                        <span class="contact_data_info">toghruldeveloper@gmail.com</span>
+                    </div>
+                    <div class="contact_data">
+                        <span class="contact_data_title">Whatsapp</span>
+                        <span class="contact_data_info">+994 515270966</span>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=994515270966" class="contact_button">Write me<i class="fa-solid fa-arrow-right"></i></a>
+
+                    </div>
+                    <div class="contact_data">
+                        <span class="contact_data_title">Messenger</span>
+                        <span class="contact_data_info">@...</span>
+                        <!-- Insert your brand name or profile -->
+    <!-- <a target="_blank" href="m.me///" class="contact_button">Write me<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contact_content">
+                <h3 class="contact_title">
+                    <i class="fa-solid fa-paper-plane-top"></i> Write me your project
+                </h3>
+                <form action="" class="contact_form" id="contact-form">
+                    <div class="contact_form_div">
+                        <label class="contact_form_tag">Names</label>
+                        <input type="text" class="contact_form_input" name="user_name" required id="contact-name" placeholder="Write your names...">
+                    </div>
+                    <div class="contact_form_div">
+                        <label class="contact_form_tag">Mail</label>
+                        <input type="email" class="contact_form_input" name="user_email" required id="contact-email" placeholder="Write your email...">
+                    </div>
+                    <div class="contact_form_div contact_form_area">
+                        <label class="contact_form_tag">Project</label>
+                        <textarea name="user_project" id="contact_project" class="contact_form_input" placeholder="Write your project"></textarea>
+                    </div>
+                    <p class="contact_message" id="contact-message"></p>
+                    <button type="submit" class="contact_button">Submit<i class="fa-solid fa-arrow-up-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section> -->
+    <!-- emailjs dosyasını kendi sunucunuza yükleyin -->
+
+
+    <script src="contact.js"></script>
+    <!-- <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+</body>
+
+</html>
